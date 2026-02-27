@@ -1,2 +1,2 @@
-@echo on
+@echo off
 composer run dev
