@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 use Laravel\Fortify\Features;
+use Illuminate\Support\Facades\Auth;
 
 Route::inertia('/', 'welcome', [
     'canRegister' => Features::enabled(Features::registration()),
@@ -11,17 +13,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::inertia('dashboard', 'dashboard')->name('dashboard');
 });
 
-
-
-Route::get('/hello', function () {
-    return view('greeting', [
-        'name' => 'Alexandr'
+Route::get('/hw', function(){
+    $user = Auth::user();
+    return Inertia::render('hello', [
+        'name' => $user?->name ?? 'Гость'
     ]);
 });
-
-Route::get('/user/{id}', function (string $id) {
-    return 'User '.$id;
-});
-
 
 require __DIR__.'/settings.php';
