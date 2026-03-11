@@ -1,5 +1,5 @@
 import React from 'react';
-import { PageProps } from '@inertiajs/react';
+import {PageProps} from '@inertiajs/core';
 
 interface HelloProps extends PageProps {
   name: string;
