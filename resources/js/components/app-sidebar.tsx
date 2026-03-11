@@ -26,14 +26,16 @@ const mainNavItems: NavItem[] = [
 
 const footerNavItems: NavItem[] = [
     {
-        title: 'React-Starter-Kit on GitHub',
+        title: 'RSK on GitHub',
         href: 'https://github.com/laravel/react-starter-kit',
         icon: Folder,
+        hint: 'React-Starter-Kit on GitHub',
     },
     {
-        title: 'React-Starter-Kit Documentation',
+        title: 'RSK Documentation',
         href: 'https://laravel.com/docs/starter-kits#react',
         icon: BookOpen,
+        hint: 'React-Starter-Kit Documentation'
     },
 ];
 
