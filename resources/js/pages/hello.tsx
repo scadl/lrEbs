@@ -10,5 +10,6 @@ export default function Hello({ name }: HelloProps) {
     <div className="p-6 text-xl font-semibold">
       Привет {name}
     </div>
+
   );
 }
